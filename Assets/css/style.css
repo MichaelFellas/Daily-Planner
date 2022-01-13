@@ -109,8 +109,9 @@ textarea {
   font-size: 20px;
 }
 
-.bottomColumn {
+.bottomRow {
   border-bottom: grey solid 3px;  
+  margin-bottom: 50px;
 }
 
 .hidden {
