@@ -1,3 +1,8 @@
+//Loads loacally stored values
+loadValues();
+
+
+
 //Checks the Day of the Week
 function time () {
     var weekDay= moment().format("dddd [the] Do [of] MMM");
@@ -24,7 +29,6 @@ function timeTwo () {
         }
         
 updateTimeTwo();
-
 
 //Assigning variables for the background color function
 var hourNow = document.querySelector("#currentHour");
@@ -53,30 +57,63 @@ function backgroundColor () {
 
 backgroundColor();
 
-//Save Buttons all doing same function
-//ADD LOCAL STORAGE TO BUTTONS
-var textSave = ""
+//Defines variables for saveBtns
+var text = "";
+var textSave = [];
 var saveBtn1 = document.querySelectorAll(".saveBtn")
+
+//Save Buttons all doing same function
 for (var i = 0; i < saveBtn1.length; i++){
     saveBtn1[i].addEventListener("click", function () {
-        var text = document.createElement("p");
-        text.textContent= "Hello World";
-        document.querySelectorAll(".col-xl-10")[0].appendChild(text);
-        var textSave = document.querySelectorAll(".col-xl-10")[0].textContent;
-        console.log(textSave);
-        localStorage.setItem("9AM Text", JSON.stringify(textSave))
+        localStorage.clear();
+        var text = document.getElementById("form0").value;       
+        localStorage.setItem("form0", text);
+        var text = document.getElementById("form1").value;       
+        localStorage.setItem("form1", text);
+        var text = document.getElementById("form2").value;       
+        localStorage.setItem("form2", text);
+        var text = document.getElementById("form3").value;       
+        localStorage.setItem("form3", text);
+        var text = document.getElementById("form4").value;       
+        localStorage.setItem("form4", text);
+        var text = document.getElementById("form5").value;       
+        localStorage.setItem("form5", text);
+        var text = document.getElementById("form6").value;       
+        localStorage.setItem("form6", text);
+        var text = document.getElementById("form7").value;       
+        localStorage.setItem("form7", text);
+        var text = document.getElementById("form8").value;       
+        localStorage.setItem("form8", text);
+        var text = document.getElementById("form9").value;       
+        localStorage.setItem("form9", text);
+        console.log(localStorage);
     });
 }
 
-//Stores Scores to local storage
-function storage (){
-    localStorage.setItem("scores", JSON.stringify(score))
+//Load saved values function
+function loadValues() {
+document.getElementById("form0").value = localStorage.getItem("form0", text)
+document.getElementById("form1").value = localStorage.getItem("form1", text)
+document.getElementById("form2").value = localStorage.getItem("form2", text)
+document.getElementById("form3").value = localStorage.getItem("form3", text)
+document.getElementById("form4").value = localStorage.getItem("form4", text)
+document.getElementById("form5").value = localStorage.getItem("form5", text)
+document.getElementById("form6").value = localStorage.getItem("form6", text)
+document.getElementById("form7").value = localStorage.getItem("form7", text)
+document.getElementById("form8").value = localStorage.getItem("form8", text)
+document.getElementById("form9").value = localStorage.getItem("form9", text)
 }
 
-//Loads scores from local storage
-function loadScores (){
-    const storageScores = JSON.parse(localStorage.getItem("scores"))
-    if (storageScores.length > 0) {
-        score = storageScores
+//Checks if it is 12AM and refreshes local storages
+function newDay() {
+    if (Number(timesNow) === 0){
+        localStorage.clear();
     }
-}
+    }
+    function updatetimeThree () {
+        newDay();
+        setInterval(newDay, 1000);
+    }
+
+
+updatetimeThree();

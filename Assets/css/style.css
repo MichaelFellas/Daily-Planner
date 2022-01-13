@@ -140,3 +140,23 @@ p {
 }
 
 
+.formSubmit:focus {
+  outline: none;
+  background-color: inherit;
+}
+
+.formSubmit {
+  font-size: 25px;
+  height: 90%;
+  width: inherit;
+  
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  font-weight: bold;
+  text-align: left;
+  background-color: inherit;
+  
+
+}
+
