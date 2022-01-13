@@ -42,7 +42,7 @@ var hourTime = document.querySelectorAll(".currentTime")
 var hourTimeBackground = document.querySelectorAll(".col-xl-10")
 //Creates empty array
 var times = [];
-var timesNow = [];
+
 //Pushes data-hour values from time sections into empty array
 for ( var i = 0; i < hourTime.length; i++ ){
      times.push(hourTime[i].dataset.hour);
@@ -115,7 +115,7 @@ document.getElementById("form9").value = localStorage.getItem("form9", text)
 
 //Checks if it is 12AM and refreshes local storages
 function newDay() {
-    if (Number(timesNow) === 0){
+    if (Number(hourNow) === 0){
         localStorage.clear();
     }
     }
