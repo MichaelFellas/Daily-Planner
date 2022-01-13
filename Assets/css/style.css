@@ -73,6 +73,12 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+.saveBtn:active {
+  
+  
+  transform: translateY(4px);
+}
+
 .weekday {
   font-size: 35px;
 }
