@@ -1,16 +1,19 @@
 //Loads loacally stored values
 loadValues();
 
-
-
 //Checks the Day of the Week
 function time () {
+    //set variable to equal current day via moment
     var weekDay= moment().format("dddd [the] Do [of] MMM");
+    //assigns var to ID current day
     $("#currentDay").text(weekDay);   
     }
     
+    //runs the previous function every second
     function updateTime () {
+        //Runs time function
         time();
+        //At interval 1000
         setInterval(time, 1000);
     }
     
@@ -31,23 +34,29 @@ function timeTwo () {
 updateTimeTwo();
 
 //Assigning variables for the background color function
-var hourNow = document.querySelector("#currentHour");
+//Assigns current hour via query selector
+var hourNow = document.querySelector("#currentHour").textContent;
+//Grabs all timeblock time sections via class currentTime
 var hourTime = document.querySelectorAll(".currentTime")
+//Grabs all timeblock input sections via col class
 var hourTimeBackground = document.querySelectorAll(".col-xl-10")
+//Creates empty array
 var times = [];
 var timesNow = [];
+//Pushes data-hour values from time sections into empty array
 for ( var i = 0; i < hourTime.length; i++ ){
-     times.push(hourTime[i].innerHTML);
+     times.push(hourTime[i].dataset.hour);
 }
-var timesNow = hourNow.innerHTML;
 
 //Sets the background based on current time
 function backgroundColor () {
     for ( var i = 0; i < hourTime.length; i++ ){
-        if ( Number(timesNow) > Number(times[i])){
+        //If time is in past sets background to red
+        if ( Number(hourNow) > Number(times[i])){
         hourTimeBackground[i].setAttribute("style", "background-color: #ffa9a4");
         }
-        if ( Number(timesNow) === Number(times[i])) {
+        //If time is now sets background to grey
+        if ( Number(hourNow) === Number(times[i])) {
         hourTimeBackground[i].setAttribute("style", "background-color: lightgrey");
         }
         else{

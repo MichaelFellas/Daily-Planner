@@ -118,10 +118,6 @@ textarea {
   display: none;
 }
 
-.currentTime {
-  display: none;
-}
-
 .rightColumn {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
