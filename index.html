@@ -4,41 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <!--Bootsrap script-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <!--Font Script-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+<!--Google Font-->   
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <!--Css Sheet-->
     <link rel="stylesheet" href="./Assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
+    <!--Header-->
     <header class="jumbotron">
+      <!--Titles-->
       <h1 class="display-3">Work Day Scheduler</h1>
+      <!--Info -->
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!--Current day displayed-->
       <p id="currentDay" class="lead weekday"></p>
+      <!--Hidden value, used for js-->
       <p id="currentHour" class="lead hidden"></p>
     </header>
-    <!--Rows and Columns-->
+    <!--Rows and Columns X10-->
+    <!--Container for all-->
     <div class="container-xl">
+     <!--Rows in container-->
       <div class="row">
+        <!--Left column, width 1/12-->
         <div class="col-xl-1 d-flex align-items-center leftColumn">
+          <!--Shows time for each time block-->
             <p class="currentTime" data-hour="9">9 AM</p>
         </div>
+        <!--Middle column, widths 10/12-->
         <div class="col-xl-10 d-flex align-items-center">
+          <!--Form for user inputs for specific timeblock-->
           <input name="9AM" class="formSubmit" id="form0" rows="5"></input>         
         </div>
+        <!--Right column, width 1/12-->
         <div class="col-xl-1 rightColumn d-flex align-items-center justify-content-center">
+          <!--Save button, using image as button-->
           <input type="image" src="./Assets/images/saveBtnSmall.png" class="saveBtn" />
         </div>
       </div>
@@ -147,12 +153,10 @@
       </div>
       <br>
       <br>
-      
-      
-      <!-- Timeblocks go here -->
     </div>
-
+<!--JQuery Script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Moment Script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./Assets/js/javascript.js"></script>
   </body>

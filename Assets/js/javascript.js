@@ -68,14 +68,18 @@ backgroundColor();
 
 //Defines variables for saveBtns
 var text = "";
-var textSave = [];
 var saveBtn1 = document.querySelectorAll(".saveBtn")
 
 //Save Buttons all doing same function
+//Adds event listeners dynamically
 for (var i = 0; i < saveBtn1.length; i++){
+    //Adds the function to all buttons
     saveBtn1[i].addEventListener("click", function () {
+        //clear local storage first
         localStorage.clear();
-        var text = document.getElementById("form0").value;       
+        //Find textbox 1 value
+        var text = document.getElementById("form0").value;
+        //saves textbox 1 save       
         localStorage.setItem("form0", text);
         var text = document.getElementById("form1").value;       
         localStorage.setItem("form1", text);
@@ -95,12 +99,12 @@ for (var i = 0; i < saveBtn1.length; i++){
         localStorage.setItem("form8", text);
         var text = document.getElementById("form9").value;       
         localStorage.setItem("form9", text);
-        console.log(localStorage);
     });
 }
 
 //Load saved values function
 function loadValues() {
+    //loads saved values for each textbox
 document.getElementById("form0").value = localStorage.getItem("form0", text)
 document.getElementById("form1").value = localStorage.getItem("form1", text)
 document.getElementById("form2").value = localStorage.getItem("form2", text)
@@ -113,7 +117,7 @@ document.getElementById("form8").value = localStorage.getItem("form8", text)
 document.getElementById("form9").value = localStorage.getItem("form9", text)
 }
 
-//Checks if it is 12AM and refreshes local storages
+//Checks if it is 12AM and refreshes local storages if browser is open
 function newDay() {
     if (Number(hourNow) === 0){
         localStorage.clear();

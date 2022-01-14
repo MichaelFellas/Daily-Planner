@@ -1,3 +1,4 @@
+/*General Body code*/
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -5,15 +6,12 @@ body {
   background-color: rgb(36, 36, 36);
 }
 
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+/*Text colour throughout doc*/
+p {
+  color: white;
 }
 
+/*Jumbotron header*/
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -24,15 +22,13 @@ textarea {
   padding-bottom: 10px;
 }
 
-.description {
-  white-space: pre-wrap;
+/*Time font size*/
+.weekday {
+  font-size: 35px;
 }
 
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
-
+/*GRID*/
+/*Rows*/
 .row {
   white-space: pre-wrap;
   height: 120px;
@@ -40,55 +36,14 @@ textarea {
   margin-top: 0px;
 }
 
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ffa9a4;
-  color: white;
-}
-
-.future {
-  background-color: #88ffa5;
-  color: white;
-}
-
-.saveBtn {
-  height: 60px;
-  width: 60px;
-  background-color: transparent;
-  
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-.saveBtn:active {
-  
-  
-  transform: translateY(4px);
-}
-
-.weekday {
-  font-size: 35px;
-}
-
+/*Container*/
 .container-xl {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
 }
 
+/*Left and right columns*/
 .col-xl-1 {
   height: inherit;
   margin-top: 0px;
@@ -97,6 +52,7 @@ textarea {
   text-align: center;  
 }
 
+/*Left and rigt column text*/
 .col-xl-1 p {
   font-size: 35px;
   margin-left: auto;
@@ -104,6 +60,7 @@ textarea {
   margin-top: 10px;
 }
 
+/*Middle Columns*/
 .col-xl-10 {
   border-top: solid rgb(34, 130, 255) 5px;  
   border-right: solid rgb(34, 130, 255) 5px;
@@ -115,15 +72,18 @@ textarea {
   font-size: 20px;
 }
 
+/*Special class for the bottom rows*/
 .bottomRow {
-  border-bottom: grey solid 3px;  
+  border-bottom: solid rgb(34, 130, 255) 5px;  
   margin-bottom: 50px;
 }
 
+/*For hiding current hour*/
 .hidden {
   display: none;
 }
 
+/*Sets border for right side column*/
 .rightColumn {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
@@ -131,6 +91,7 @@ textarea {
   border-right: solid rgb(34, 130, 255) 5px;
 }
 
+/* Sets border for left side columns*/
 .leftColumn {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
@@ -138,28 +99,38 @@ textarea {
   border-left: solid rgb(34, 130, 255) 5px;
 }
 
-p {
-  color: white;
+/*SAVE BUTTON*/
+.saveBtn {
+  height: 60px;
+  width: 60px;
+  background-color: transparent;  
 }
 
-
-.formSubmit:focus {
-  outline: none;
-  background-color: inherit;
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
+.saveBtn:active { 
+    transform: translateY(4px);
+}
+
+/*FORM*/
 .formSubmit {
   font-size: 25px;
   height: 90%;
-  width: inherit;
-  
+  width: inherit;  
   margin: 0px;
   border: 0px;
   padding: 0px;
   font-weight: bold;
   text-align: left;
   background-color: inherit;
-  
-
 }
+
+.formSubmit:focus {
+  outline: none;
+  background-color: inherit;
+}
+
 
