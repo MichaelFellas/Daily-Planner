@@ -29,8 +29,7 @@ In the assets folder you will find
 ![Coding-Quiz-Screenshot](./Assets/images/day-Planner.png)
 
 ## Webpage URL
-[Day-Planner-URL](https://https://michaelfellas.github.io/Daily-Planner/)
-
+[Day-Planner-URL](https://michaelfellas.github.io/Daily-Planner)
 ### End
 
 Michael Ariti 2021
